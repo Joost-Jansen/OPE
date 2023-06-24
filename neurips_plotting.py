@@ -280,18 +280,18 @@ def neurips_plot_behavior_2D(behavior_policies, save_path, image_path, weighted,
             axes[0].plot(clean_results['kl_div'], errs, color=color, linestyle=linestyle, label=pi_b, marker=marker)
             axes[0].fill_between(clean_results['kl_div'], errs-1.96*errs_se, errs+1.96*errs_se, alpha=0.25)
             axes[0].set_yscale('log')
-            axes[0].set_xlabel("KL Divergence")
+            axes[0].set_xlabel("State-Visitation Difference")
             axes[0].set_title("MSE")
             
             # Bias squared
             axes[1].plot(clean_results['kl_div'], abs(ests - clean_results["true_val"])**2, color=color, linestyle=linestyle, marker=marker)
-            axes[1].set_xlabel("KL Divergence")
+            axes[1].set_xlabel("State-Visitation Difference")
             axes[1].set_title("Bias Squared Estimate")
             axes[1].set_yscale('log')
             
             # Variance.
             axes[2].plot(clean_results['kl_div'], ests_var, color=color, linestyle=linestyle, marker=marker)
-            axes[2].set_xlabel("KL Divergence")
+            axes[2].set_xlabel("State-Visitation Difference")
             axes[2].set_title("Variance Estimate")
             axes[2].set_yscale('log')
         
@@ -337,18 +337,18 @@ def neurips_plot_ns_2D(ns, behavior_policy, save_path, image_path, weighted, cyc
             axes[0].plot(clean_results['kl_div'], errs, color=color, linestyle=linestyle, label=fixed_n_value, marker=marker)
             axes[0].fill_between(clean_results['kl_div'], errs-1.96*errs_se, errs+1.96*errs_se, alpha=0.25)
             axes[0].set_yscale('log')
-            axes[0].set_xlabel("KL Divergence")
+            axes[0].set_xlabel("State-visitation Difference")
             axes[0].set_title("MSE")
             
             # Bias squared
             axes[1].plot(clean_results['kl_div'], abs(ests - clean_results["true_val"])**2, color=color, linestyle=linestyle, marker=marker)
-            axes[1].set_xlabel("KL Divergence")
+            axes[1].set_xlabel("State-visitation Difference")
             axes[1].set_title("Bias Squared Estimate")
             axes[1].set_yscale('log')
             
             # Variance.
             axes[2].plot(clean_results['kl_div'], ests_var, color=color, linestyle=linestyle, marker=marker)
-            axes[2].set_xlabel("KL Divergence")
+            axes[2].set_xlabel("State-visitation Difference")
             axes[2].set_title("Variance Estimate")
             axes[2].set_yscale('log')
         
