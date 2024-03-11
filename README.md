@@ -1,6 +1,6 @@
 # SOPE: Spectrum of Off-Policy Estimators
 
-This respository contains code for the following paper:
+This respository contains code for the following [paper](paper.pdf):
 > Mayank Prashar, Jochem van Lith and Joost Jansen. \
 State Visitation Correction in Off-Policy Reinforcement Learning.
 
